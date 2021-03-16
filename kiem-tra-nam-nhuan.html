@@ -10,12 +10,24 @@
 
 <body>
     <script>
-        let year = Number(prompt("nhap nam "))
-        let isLeapYear = Number(year % 4)
-        if (isLeapYear == 0) {
+        let year = Number(prompt("nhap nam "));
+        let result1 = Number(year % 4);
+        let result2 = Number(year % 100);
+        let result3 = Number(year % 400);
+        if (result1 == 0) {
+            if (result2 != 0)
             alert(year + " la nam nhuan")
         }
-        
+        else {
+            alert(year + " khong phai nam nhuan")
+        }
+        if (result2 == 0) {
+            if (result3 == 0)
+            alert(year + " la nam nhuan")
+        }
+        else {
+            alert(year + " khong phai nam nhuan")
+        }
     </script>
 </body>
 
